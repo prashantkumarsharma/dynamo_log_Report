@@ -1,0 +1,111 @@
+{
+    "id": "44969680-1cf3-4ba1-a013-25b048c35c93",
+    "task_name": "dynamo/log-report",
+    "trial_name": "log-report__QPHHhTT",
+    "trial_uri": "file:///Users/mac/Downloads/log-report/jobs/2026-07-21__15-54-24/log-report__QPHHhTT",
+    "task_id": {
+        "path": "."
+    },
+    "source": null,
+    "task_checksum": "25d8c01700b682c753aa3a1d1f1679a9618d1f115b34ac4fee51cf71187a2d7b",
+    "config": {
+        "task": {
+            "path": ".",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "log-report__QPHHhTT",
+        "trials_dir": "jobs/2026-07-21__15-54-24",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "oracle",
+            "import_path": null,
+            "model_name": null,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "b5402bc7-8aa2-41d5-b897-ee01248fbc71"
+    },
+    "agent_info": {
+        "name": "oracle",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": null,
+    "exception_info": {
+        "exception_type": "RewardFileNotFoundError",
+        "exception_message": "No reward file found at jobs/2026-07-21__15-54-24/log-report__QPHHhTT/verifier/reward.txt or jobs/2026-07-21__15-54-24/log-report__QPHHhTT/verifier/reward.json",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/mac/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/trial/trial.py\", line 354, in run\n    await self._run()\n  File \"/Users/mac/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/mac/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/trial/single_step.py\", line 105, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/mac/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/trial/trial.py\", line 535, in _run_shared_verifier\n    return await asyncio.wait_for(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n        verifier.verify(), timeout=timeout_sec\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/tasks.py\", line 488, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/mac/.local/share/uv/tools/harbor/lib/python3.14/site-packages/harbor/verifier/verifier.py\", line 232, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at jobs/2026-07-21__15-54-24/log-report__QPHHhTT/verifier/reward.txt or jobs/2026-07-21__15-54-24/log-report__QPHHhTT/verifier/reward.json\n",
+        "occurred_at": "2026-07-21T15:54:45.743352"
+    },
+    "started_at": "2026-07-21T10:24:25.921496Z",
+    "finished_at": "2026-07-21T10:24:57.145243Z",
+    "environment_setup": {
+        "started_at": "2026-07-21T10:24:26.032230Z",
+        "finished_at": "2026-07-21T10:24:41.822713Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-07-21T10:24:41.822889Z",
+        "finished_at": "2026-07-21T10:24:41.823093Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-07-21T10:24:41.823359Z",
+        "finished_at": "2026-07-21T10:24:42.445830Z"
+    },
+    "verifier": {
+        "started_at": "2026-07-21T10:24:44.766491Z",
+        "finished_at": "2026-07-21T10:24:45.736455Z"
+    },
+    "step_results": null
+}

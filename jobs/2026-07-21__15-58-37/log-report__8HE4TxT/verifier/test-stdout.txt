@@ -1,0 +1,79 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 4 items
+
+../tests/test_outputs.py FFFF                                            [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_success_criterion_1 ___________________________
+
+    def test_success_criterion_1():
+        """Success criterion 1: report.json exists and is valid JSON."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       with open("/app/report.json") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:4: FileNotFoundError
+___________________________ test_success_criterion_2 ___________________________
+
+    def test_success_criterion_2():
+        """Success criterion 2: total_requests is correct."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       with open("/app/report.json") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:4: FileNotFoundError
+___________________________ test_success_criterion_3 ___________________________
+
+    def test_success_criterion_3():
+        """Success criterion 3: unique_ips is correct."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       with open("/app/report.json") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:4: FileNotFoundError
+___________________________ test_success_criterion_4 ___________________________
+
+    def test_success_criterion_4():
+        """Success criterion 4: top_path is correct."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       with open("/app/report.json") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:4: FileNotFoundError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_success_criterion_1 - FileNotFoundError...
+FAILED ../tests/test_outputs.py::test_success_criterion_2 - FileNotFoundError...
+FAILED ../tests/test_outputs.py::test_success_criterion_3 - FileNotFoundError...
+FAILED ../tests/test_outputs.py::test_success_criterion_4 - FileNotFoundError...
+============================== 4 failed in 0.05s ===============================
